@@ -1,4 +1,6 @@
 html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -10,7 +12,7 @@ body{
   background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */}
 
-label{
+#editor-form label{
   color:black;
   display:block;
   text-transform: uppercase;
@@ -18,22 +20,30 @@ label{
   letter-spacing: 2px;
   margin-top:12px;
   font-size:24px;
+  position:relative;
+  top:25px;
 }
 .cardboard{
   background-image: url("https://www.transparenttextures.com/patterns/cardboard.png" );
 }
 
+.cutout{
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 7px 7px 7px 0 rgba(0,0,0,0.5) inset;
+  box-shadow: 7px 7px 7px 0 rgba(0,0,0,0.5) inset;
+}
 #piece-holder{
   min-height:200px;
-  background-color:purple;
+  border: 5px solid #337edb;
+  background-color:white;
 }
 #editor-form textarea{
   padding:10px;
   min-width:100%;
   max-width:100%;
   min-height:24px;
-  -webkit-box-shadow: 7px 7px 7px 0 rgba(0,0,0,0.5) inset;
-  box-shadow: 7px 7px 7px 0 rgba(0,0,0,0.5) inset;  border: 10px solid #337edb;
+  
+  border: 22px solid #337edb;
   border-radius:5px;
 }
 #editor-form textarea:focus,
@@ -58,5 +68,5 @@ iframe{
   background-size:cover;
   z-index:2;
 }
-//http://retrominder.tv/
+
 
